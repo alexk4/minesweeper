@@ -24,10 +24,12 @@ export default defineComponent({
   margin: 0 auto;
   padding: 20px;
   max-width: 600px;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 h1 {
-  color: #333;
+  color: var(--h1-color);
   margin-bottom: 20px;
 }
 </style>

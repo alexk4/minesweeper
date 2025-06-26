@@ -1,4 +1,8 @@
 :root {
+  --h1-color: #333;
+  --background-color: #ffffff;
+  --text-color: #213547;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -67,6 +71,10 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
+    --h1-color: #333;
+    --background-color: #ffffff;
+    --text-color: #213547;
+
     color: #213547;
     background-color: #ffffff;
   }
@@ -75,5 +83,13 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --h1-color: #ffffff;
+    --background-color: #242424;
+    --text-color: rgba(255, 255, 255, 0.87);
   }
 }
