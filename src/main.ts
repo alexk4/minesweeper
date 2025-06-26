@@ -1,5 +1,16 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './assets/main.css'
+import './style.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+const updateThemeColor = () => {
+  const themeColor = window.matchMedia('(prefers-color-scheme: dark)').matches ? '#242424' : '#ffffff'
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', themeColor)
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeColor)
+
+updateThemeColor()
+
+app.mount('#app')
